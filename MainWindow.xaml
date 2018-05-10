@@ -1,0 +1,53 @@
+﻿<Window x:Class="WPF_SimpleGradingSystem20180510.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SimpleGradingSystem20180510"
+        mc:Ignorable="d"
+        Title="Simple Grading System" Height="350" Width="525">
+    
+    <Border Padding="10">
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+
+                    <!--Input Data-->
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Input Name"/>
+                        <TextBox x:Name="InputNameText" Padding="2"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin=" 0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Input Grade"/>
+                    <TextBox x:Name="InputGradeText" Padding="2" Grid.Column="0"/>
+                    <Button x:Name="AddButton" Click="AddButton_Click" Padding="2" Content="Add" Grid.Column="1"/>
+                </Grid>
+                <!-- List of Grades-->
+
+            <TextBlock Text="List of Grades"/>
+            <ListBox x:Name="GradeList" Padding="2" />
+
+            <!--Buttons-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+                <StackPanel Grid.Column="0">
+                    <Button x:Name="ComputeAveButton" Click="ComputeAveButton_Click" Content="Compute Average" Padding="2" Margin="0 50 0 0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+    </Window>

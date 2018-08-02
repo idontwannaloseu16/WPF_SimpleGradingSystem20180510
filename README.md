@@ -1,1 +1,2 @@
-# WPF_SimpleGradingSystem20180510
+# This is a simple grading system using WPF
+
